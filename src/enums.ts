@@ -41,3 +41,40 @@ export enum EnumRecurrentPaymentUpdateInterval {
   SEMIANNUAL = 6,
   ANNUAL = 12,
 }
+
+
+
+//omni
+export enum EnumPhysicalCardType {
+  CREDIT = 'PhysicalCreditCard',
+  DEBIT = 'PhysicalDebitCard'
+}
+
+export enum EnumInputMode {
+  TYPED = 'Typed',
+  MAGSTRIPE = 'MagStripe',
+  EMV = 'Emv'
+}
+
+export enum EnumAuthenticationMethod {
+  NOPASSWORD = 'NoPassword',
+  ONLINEAUTHENTICATION = 'OnlineAuthentication',
+  OFFLINEAUTHENTICATION = 'OfflineAuthentication'
+}
+
+export enum EnumSecurityCodeStatus {
+  COLLECTED = 'Collected',
+  UNREADABLE = 'Unreadable',
+  NONEXISTENT = 'Nonexistent'
+}
+
+
+
+export enum EnumPinPadPhysicalCharacteristics {
+  WITHOUTPINPAD = 'WithoutPinPad',
+  PINPADWITHOUTCHIPREADER = 'PinpadWithoutChipReader',
+  PINPADWITHCHIPREADERWITHOUTSAMMODULE = 'PinPadWithChipReaderWithoutSamModule',
+  PINPADWITHCHIPREADERWITHSAMMODULE = 'PinPadWithChipReaderWithSamModule',
+  PINPADWITHCHIPREADERWITHOUTSAMANDCONTACTLESS = 'PinpadWithChipReaderWithoutSamAndContactless',
+  PINPADWITHCHIPREADERWITHSAMANDCONTACTLESS = 'PinpadWithChipReaderWithSamAndContactless',
+}

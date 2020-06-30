@@ -4,4 +4,5 @@ export interface CieloTransactionInterface {
   merchantId: string;
   merchantKey: string;
   requestId?: string;
+  authorization?: string
 }

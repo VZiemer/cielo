@@ -4,3 +4,7 @@ export * from './capture.request.model';
 export * from './capture.response.model';
 export * from './cancel-transaction.request.model';
 export * from './cancel-transaction.response.model';
+
+//omni
+
+export * from './transaction-physical-credit-card.request.model';

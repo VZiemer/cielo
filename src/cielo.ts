@@ -13,6 +13,7 @@ export interface CieloConstructor {
   debug?: boolean;
   sandbox?: boolean;
   requestId?: string;
+  authorization?: string;
 }
 
 export class Cielo {

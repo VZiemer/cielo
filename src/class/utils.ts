@@ -27,6 +27,10 @@ export class Utils {
     return this.post<T, U>({ path: '/1/sales/' }, data);
   }
 
+  public postToPhysicalSales<T, U>(data: U): Promise<T> {
+    return this.post<T, U>({ path: '/1/physicalSales/' }, data);
+  }
+
   /**
    * Realiza um post na API da Cielo 
    * @param params path do post
@@ -53,6 +57,7 @@ export class Utils {
         MerchantId: this.cieloConstructor.merchantId,
         MerchantKey: this.cieloConstructor.merchantKey,
         RequestId: this.cieloConstructor.requestId || "",
+        Authorization: this.cieloConstructor.authorization,
         "Content-Type": "application/json",
       },
     } as IHttpRequestOptions;

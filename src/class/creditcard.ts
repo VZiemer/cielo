@@ -6,7 +6,8 @@ import {
   TransactionCreditCardResponseModel,
   CaptureRequestModel,
   CaptureResponseModel,
-  CancelTransactionRequestModel
+  CancelTransactionRequestModel,
+  TransactionPhysicalCreditCardRequestModel
 } from '../models/credit-card';
 
 export class CreditCard {
@@ -21,6 +22,10 @@ export class CreditCard {
   public transaction(transaction: TransactionCreditCardRequestModel): Promise<TransactionCreditCardResponseModel> {
         return this.util.postToSales<TransactionCreditCardResponseModel, TransactionCreditCardRequestModel>(transaction);
   }
+
+  public physicalTransaction(transaction: TransactionPhysicalCreditCardRequestModel): Promise<TransactionCreditCardResponseModel> {
+    return this.util.postToSales<TransactionCreditCardResponseModel, TransactionPhysicalCreditCardRequestModel>(transaction);
+}
 
   public captureSaleTransaction(transaction: CaptureRequestModel): Promise<CaptureResponseModel> {
       const options: IHttpRequestOptions = this.util.getHttpRequestOptions({
