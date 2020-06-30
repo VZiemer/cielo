@@ -22,6 +22,7 @@ export class Cielo {
   private debug: boolean;
   private sandbox: boolean;
   private requestId?: string | undefined;
+  private authorization?: string | undefined;
 
   public creditCard: CreditCard;
   public debitCard: DebitCard;
@@ -47,7 +48,7 @@ export class Cielo {
     this.debug = constructor.debug || false;
     this.sandbox = constructor.sandbox || false;
     this.requestId = constructor.requestId || undefined;
-
+    this.authorization= constructor.authorization || undefined;
     const [hostnameTransacao, hostnameQuery] = this.getHostnames(this.sandbox);
     const cieloTransactionInterface: CieloTransactionInterface = {
       hostnameTransacao,
@@ -55,6 +56,7 @@ export class Cielo {
       merchantId: this.merchantId,
       merchantKey: this.merchantKey,
       requestId: this.requestId,
+      authorization: this.authorization
     };
 
     this.creditCard = new CreditCard(cieloTransactionInterface);
